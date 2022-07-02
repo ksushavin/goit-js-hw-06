@@ -12,6 +12,26 @@ body {
   color: #212121;
   line-height: 1.5;
 }
+/* //стилі задача №3 */
+.gallery {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.gallery__item {
+  margin-right: 30px;
+}
+.gallery__wrapper {
+  display: flex;
+  width: 250px;
+  height: 220px;
+}
+.gallery__pic {
+  display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 
 input {
   padding: 8px;
