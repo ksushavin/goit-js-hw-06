@@ -6,13 +6,14 @@ const inputValidationLength = Number(validationInputEl.dataset.length);
 validationInputEl.addEventListener("blur", onInputValidate);
 
 function onInputValidate(event) {
+    const input = event.currentTarget;
+    const inputCls = event.currentTarget.classList;
     
-    if (event.currentTarget.value.length === inputValidationLength) {
-        event.currentTarget.classList.remove("invalid");
-        return event.currentTarget.classList.add("valid");
-      
+    if (input.value.length === inputValidationLength) {
+        inputCls.remove("invalid");
+        return inputCls.add("valid");
     }
-    event.currentTarget.classList.remove("valid");
-    return event.currentTarget.classList.add("invalid");
+    inputCls.remove("valid");
+    return inputCls.add("invalid");
 };
 
